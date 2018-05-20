@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Staircase - A Tiny Counter
+		</title>
+	</head>
+	<body onload='run();' style='background: black; margin: 0; overflow: hidden;'>
+		<span id='numd' style='position: absolute; top: 0; left: 0; height: 100%; line-height: 100vh; width: 100%; color: orange; font-family: SF Pro Display Thin; font-size: 28vh; text-align: center;'>0</span>
+		<script>
+			function run()  {
+				document.getElementsByTagName('body')[0].addEventListener('keyup', function(e)  {
+					if(e.key == 'ArrowRight')  {
+						document.getElementById('numd').innerHTML = (+document.getElementById('numd').innerHTML) + 1;
+						//document.getElementById('numd').style.color = "rgb(" + (parseInt(Math.random() * 255)) + "," + (parseInt(Math.random() * 255)) + "," + (parseInt(Math.random() * 255)) + ")";
+						document.getElementsByTagName('body')[0].style.backgroundColor = "rgb(" + (parseInt(Math.random() * 128)) + "," + (parseInt(Math.random() * 128)) + "," + (parseInt(Math.random() * 128)) + ")";
+					}  else if(e.key == 'ArrowLeft')  {
+						document.getElementById('numd').innerHTML = (+document.getElementById('numd').innerHTML) - 1;
+					}
+				});
+			}
+		</script>
+	</body>
+</html>
